@@ -1,11 +1,7 @@
 #!/usr/bin/env groovy
 
-pipeline {
-    agent {
-        docker {
-            image 'sfdx-docker:latest'
-        }
-    }
+node {
+    agent { dockerfile true }
     stage('Main build') {
         checkout scm
 
