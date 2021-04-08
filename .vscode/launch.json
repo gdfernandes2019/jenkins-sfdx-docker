@@ -11,6 +11,13 @@
       "logFile": "${command:AskForLogFileName}",
       "stopOnEntry": true,
       "trace": true
+    },
+    {
+      "name": "Docker Node.js Launch",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "platform": "node"
     }
   ]
 }
